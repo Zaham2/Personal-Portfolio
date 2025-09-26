@@ -1,0 +1,7 @@
+project_id = "ejfwrofizwitkmgsctsb"
+
+[functions.validate-admin-key]
+verify_jwt = false
+
+[functions.admin-operations]
+verify_jwt = false

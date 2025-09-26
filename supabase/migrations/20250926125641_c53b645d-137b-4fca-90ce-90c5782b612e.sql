@@ -1,0 +1,2 @@
+-- Create an edge function for admin database operations
+-- This allows us to use the service role key securely from the server side
