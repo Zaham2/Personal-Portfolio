@@ -143,9 +143,13 @@ export const Projects = () => {
                 {selectedProject.detailed_description && (
                   <div>
                     <h4 className="text-lg font-semibold mb-3">Project Overview</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {selectedProject.detailed_description}
-                    </p>
+                    <ul className="text-muted-foreground leading-relaxed space-y-2 ml-4">
+                      {selectedProject.detailed_description.split('\n').filter(point => point.trim()).map((point, index) => (
+                        <li key={index} className="relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-primary before:font-bold">
+                          {point.trim()}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 )}
 
